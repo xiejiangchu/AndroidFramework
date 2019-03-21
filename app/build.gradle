@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.xie.framwork"
-        minSdkVersion 28
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -100,9 +100,12 @@ dependencies {
     api 'com.hjq:xxpermissions:5.0'
     api 'com.tencent.bugly:crashreport_upgrade:latest.release'
 
+    api 'com.journeyapps:zxing-android-embedded:3.6.0'
+//    api 'com.liulishuo.filedownloader:library:1.7.6'
+//    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+//    api 'com.zhihu.android:matisse:0.5.1'
+
     api 'q.rorbin:badgeview:1.1.3'
-    debugApi 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseApi 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     api project(path: ':retrofit-lifecycle-common')
 
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
