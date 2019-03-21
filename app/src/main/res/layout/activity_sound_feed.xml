@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/record_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_record_audio"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <com.ebscn.callanswer.audio.ui.view.RecordAudioView
+            android:id="@+id/iv_recording"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_record_voice"
+            android:enabled="false"
+            app:layout_constraintBottom_toTopOf="@id/operate_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.ebscn.callanswer.audio.ui.view.LineWaveVoiceView
+            android:id="@+id/horvoiceview"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/iv_recording"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:voiceLineWidth="3dp"
+            app:voiceTextColor="#666"
+            app:voiceTextSize="14dp" />
+
+        <TextView
+            android:id="@+id/recorder_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:maxEms="15"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_recording" />
+
+        <LinearLayout
+            android:id="@+id/operate_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/voice_recorder_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#555"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/dividerGray" />
+
+            <Button
+                android:id="@+id/voice_recorder_send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="发送"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/dividerGray"
+            app:layout_constraintBottom_toTopOf="@id/operate_view" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/audio_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_record_audio"
+        android:background="#86000000" />
+</RelativeLayout>

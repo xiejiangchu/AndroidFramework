@@ -1,0 +1,1 @@
+include ':app',':retrofit-lifecycle-common', ':retrofit-lifecycle-compiler'
