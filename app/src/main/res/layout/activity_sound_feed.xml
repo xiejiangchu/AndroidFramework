@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white">
 
-        <com.ebscn.callanswer.audio.ui.view.RecordAudioView
+        <com.xie.framwork.audio.ui.view.RecordAudioView
             android:id="@+id/iv_recording"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.ebscn.callanswer.audio.ui.view.LineWaveVoiceView
+        <com.xie.framwork.audio.ui.view.LineWaveVoiceView
             android:id="@+id/horvoiceview"
             android:layout_width="match_parent"
             android:layout_height="60dp"

@@ -11,11 +11,6 @@
 //
 //import com.chad.library.adapter.base.BaseQuickAdapter;
 //import com.chad.library.adapter.base.BaseViewHolder;
-//import com.ebscn.callanswer.R;
-//import com.ebscn.callanswer.bean.ConfigIconItem;
-//import com.ebscn.callanswer.utils.GlideApp;
-//import com.ebscn.callanswer.utils.GlideUtils;
-//import com.ebscn.callanswer.utils.RetrofitManager;
 //
 //import java.util.Collections;
 //import java.util.List;

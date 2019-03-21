@@ -33,7 +33,7 @@ oauth2根据使用场景不同，分成了4种模式
 	{[/oauth/error]}
 	
 ```
-http://127.0.0.1/oauth/token?username=user&password=123456&grant_type=password&scope=select&client_id=Android&client_secret=ebscn
+http://127.0.0.1/oauth/token?username=user&password=123456&grant_type=password&scope=select&client_id=Android&client_secret=112233
 ```
 其中 client_id 分 `Android`和`iOS`,用户名、密码为用户输入，其他为常量
 返回
@@ -44,14 +44,13 @@ http://127.0.0.1/oauth/token?username=user&password=123456&grant_type=password&s
     "refresh_token": "3392482d-7246-4837-892a-1160838296f5",
     "expires_in": 3599,
     "scope": "select",
-    "license": "EBSCN GROUP"
 }
 ```
 
 ### 刷新access_token
 使用上述接口返回的refresh_token进行刷新
 ```http
-http://127.0.0.1/oauth/token?grant_type=refresh_token&scope=select&client_id=Android&client_secret=ebscn&refresh_token=51d5c79d-78d3-4268-96e7-9c69c9339666
+http://127.0.0.1/oauth/token?grant_type=refresh_token&scope=select&client_id=Android&client_secret=112233&refresh_token=51d5c79d-78d3-4268-96e7-9c69c9339666
 ```
 ```json
 {
@@ -60,7 +59,6 @@ http://127.0.0.1/oauth/token?grant_type=refresh_token&scope=select&client_id=And
     "refresh_token": "759d988f-69f7-495e-bb5a-bd29df9ff01d",
     "expires_in": 3599,
     "scope": "select",
-    "license": "com.ebscn.call.license"
 }
 ```
 

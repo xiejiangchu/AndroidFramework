@@ -25,7 +25,7 @@ public interface Constants {
     String TOKEN_GRANT_TYPE = "password";
     String TOKEN_REFRESH_GRANT_TYPE = "refresh_token";
     String TOKEN_CLIENT_ID = "Android";
-    String TOKEN_CLIENT_SECRET = "ebscn";
+    String TOKEN_CLIENT_SECRET = "112233";
 
 
     String ROLE_BOSS = "1";

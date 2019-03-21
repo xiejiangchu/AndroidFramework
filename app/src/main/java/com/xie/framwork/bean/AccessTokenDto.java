@@ -10,16 +10,6 @@ package com.xie.framwork.bean;
  */
 public class AccessTokenDto {
 
-
-    /**
-     * access_token : 98cd8742-6886-4a0b-b2b1-0b2c57b3d86b
-     * token_type : bearer
-     * refresh_token : c5d0ac3f-86b5-4885-a9b5-97c78582cd7f
-     * expires_in : 36205
-     * scope : select
-     * license : com.ebscn.call.license
-     */
-
     private String access_token;
     private String token_type;
     private String refresh_token;
