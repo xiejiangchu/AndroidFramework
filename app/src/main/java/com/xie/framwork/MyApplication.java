@@ -13,7 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.multidex.MultiDex;
 
-import com.xie.framwork.activity.LoginActivity;
+import com.xie.framwork.activity.MainActivity;
 import com.xie.framwork.utils.Constants;
 
 import es.dmoral.toasty.Toasty;
@@ -125,7 +125,7 @@ public class MyApplication extends Application {
     public class myreceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            intent = new Intent(MyApplication.this, LoginActivity.class);
+            intent = new Intent(MyApplication.this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             MyApplication.this.startActivity(intent);
         }

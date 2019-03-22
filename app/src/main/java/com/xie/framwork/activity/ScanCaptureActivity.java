@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.journeyapps.barcodescanner.CaptureActivity;
+import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 import com.xie.framwork.R;
 import com.xie.framwork.utils.DeviceUtil;
 
@@ -12,13 +14,7 @@ public class ScanCaptureActivity extends CaptureActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DeviceUtil.setStatusBarColor(this, R.color.text_black);
-        findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        DeviceUtil.setStatusBarColor(this, R.color.black);
 
     }
 
@@ -28,7 +24,7 @@ public class ScanCaptureActivity extends CaptureActivity {
      * @return the DecoratedBarcodeView
      */
     protected DecoratedBarcodeView initializeContent() {
-        setContentView(R.layout.frm_scan_activity);
+        setContentView(R.layout.activity_scan);
         DecoratedBarcodeView barcodeScannerView = (DecoratedBarcodeView) findViewById(R.id.zxing_barcode_scanner);
         barcodeScannerView.setStatusText("");
         return barcodeScannerView;

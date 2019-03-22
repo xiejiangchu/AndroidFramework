@@ -18,7 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import com.quick.core.util.app.AppUtil;
+import com.xie.framwork.MyApplication;
 
 import java.net.NetworkInterface;
 import java.util.Collections;
@@ -245,8 +245,8 @@ public class DeviceUtil {
 
     public static void hideInputKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-        View view =activity.getCurrentFocus();
-        if (view!=null) {
+        View view = activity.getCurrentFocus();
+        if (view != null) {
             imm.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
@@ -257,7 +257,7 @@ public class DeviceUtil {
      * @param et
      */
     public static void hideInputKeyboard(View et) {
-        InputMethodManager imm = (InputMethodManager) AppUtil.getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) MyApplication.getInstance().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(et.getWindowToken(), 0);
     }
 
@@ -270,7 +270,7 @@ public class DeviceUtil {
         et.setFocusable(true);
         et.setFocusableInTouchMode(true);
         et.requestFocus();
-        InputMethodManager imm = (InputMethodManager) AppUtil.getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) MyApplication.getInstance().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(et, 0);
     }
 
